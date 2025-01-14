@@ -20,7 +20,7 @@ service / on new http:Listener(9090) {
     resource function post contact(@http:Payload SalesforceContact
     salesforceContact) returns Contact|error? {
     Contact contact = transform(salesforceContact);
-    return contacts;
+    return contact;
     }
 }
 
